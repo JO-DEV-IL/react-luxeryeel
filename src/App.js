@@ -23,8 +23,6 @@ const App = () => {
         const data = await response.json()
         setMovies(data.Search)
     }
-
-    // const youtube = `https://www.youtube.com/results?search_query=${searchTerm}`
     
     //App display
     return (
@@ -48,10 +46,12 @@ const App = () => {
 
             {movies.length > 0 ? (
                 <div className='movie-container'>
+                    <div className='success'>
+                        <h2>Results found!</h2>
+                        <h2>Click a title to watch the trailer on Youtube:</h2>
+                    </div>
                     {movies.map((movie) => (
-                        <a href='#'>
-                            <MovieCard movie={movie}/>
-                        </a>
+                        <MovieCard movie={movie}/>
                     ))}
                 </div>
                 ) : (
@@ -62,8 +62,6 @@ const App = () => {
         </div>
     )
 }
-
-
 
 //Exports App
 export default App

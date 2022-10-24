@@ -3,11 +3,14 @@ import React from 'react'
 
 const MovieCard = ({ movie }) => {
     
-    const youtube = `https://www.youtube.com/results?search_query=${movie.Title} trailer`
+    const youtube = `https://www.youtube.com/results?search_query=${movie.Title} ${movie.Year} official trailer`
     
     return (
         <div className='movie'>
-            <a href={youtube}>
+            <a 
+                target="_blank"
+                rel="noreferrer"
+                href={youtube}>
                 <div>
                     <img 
                         src={movie.Poster !== 'N/A' ? movie.Poster : 'Missing image in API'}
