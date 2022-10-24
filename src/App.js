@@ -1,15 +1,12 @@
-//Import React dependencies
+//Imports
 import React from 'react'
 import { useState } from 'react'
-
-//CSS
 import './App.css'
 import SearchIcon from './search.svg'
+import MovieCard from './MovieCard.jsx'
 
 // API handling
 const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=e91f2444'
-
-import MovieCard from './MovieCard.jsx'
 
 
 //App structure
